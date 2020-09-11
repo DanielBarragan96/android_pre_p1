@@ -9,4 +9,5 @@ A continuación se describe la problemática a resolver, y las fases de la tarea
 
 Se requiere hacer una aplicación con diseño basado en lineamientos de material design, la cual aproveche de manera óptima el espacio en pantalla, además de mostrar al usuario una interfaz con la cual pueda interactuar y navegar dentro de la aplicación.
 
+El video de la aplicación funcionando se encuentra en este [link](https://youtu.be/Ceg7obNuUkM)
 El reporte se encuetra en este [link](https://docs.google.com/document/d/1e6XdsbXa8R4FOOYIJa8MrypTC8kZiqYKwG6tD9yyL-k).
