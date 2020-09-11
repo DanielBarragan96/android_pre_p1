@@ -1,16 +1,12 @@
 # pre_p1
 
-A new Flutter project.
+### Repaso para practica 1 Android
 
-## Getting Started
+El propósito de la tarea es aplicar los temas vistos en clase, en el transcurso de las sesiones previas al examen, de esta forma servirá de práctica para estudiar antes de la evaluación parcial.
 
-This project is a starting point for a Flutter application.
+La tarea se divide en fases, mismas que forman parte del criterio de evaluación.
+A continuación se describe la problemática a resolver, y las fases de la tarea.
 
-A few resources to get you started if this is your first Flutter project:
+Se requiere hacer una aplicación con diseño basado en lineamientos de material design, la cual aproveche de manera óptima el espacio en pantalla, además de mostrar al usuario una interfaz con la cual pueda interactuar y navegar dentro de la aplicación.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+El reporte se encuetra en este [link](https://docs.google.com/document/d/1e6XdsbXa8R4FOOYIJa8MrypTC8kZiqYKwG6tD9yyL-k).
