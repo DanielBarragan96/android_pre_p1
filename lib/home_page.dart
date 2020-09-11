@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pre_p1/second_page.dart';
+import 'package:pre_p1/third_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -118,7 +119,20 @@ class _HomePageState extends State<HomePage> {
                   flex: 1,
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context)
+                        .push(
+                      MaterialPageRoute(
+                        builder: (context) => ThirdPage(),
+                      ),
+                    )
+                        .then(
+                      (returnedValue) {
+                        _datoPage3 = returnedValue;
+                        setState(() {});
+                      },
+                    );
+                  },
                   child: Text(
                     "Pagina 3",
                     style: Theme.of(context).textTheme.button,
