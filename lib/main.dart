@@ -45,6 +45,10 @@ class MyApp extends StatelessWidget {
             fontSize: 14,
             color: Colors.white,
           ),
+          headline6: TextStyle(
+            fontSize: 14,
+            color: Colors.black,
+          ),
         ),
       ),
       home: HomePage(),

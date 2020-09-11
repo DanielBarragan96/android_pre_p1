@@ -68,10 +68,9 @@ class _SecondPageState extends State<SecondPage> {
                 },
                 child: Text(
                   "Generar",
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
-                color: Theme.of(context).primaryColor,
-                textColor: Colors.white,
+                color: Colors.white,
               ),
               MaterialButton(
                 onPressed: () {
@@ -82,10 +81,9 @@ class _SecondPageState extends State<SecondPage> {
                 },
                 child: Text(
                   "Guardar",
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.headline6,
                 ),
-                color: Theme.of(context).primaryColor,
-                textColor: Colors.white,
+                color: Colors.white,
               ),
             ],
           ),
