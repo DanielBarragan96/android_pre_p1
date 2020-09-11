@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pre_p1/second_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -16,6 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text('Tarea 1'),
       ),
@@ -61,7 +63,39 @@ class _HomePageState extends State<HomePage> {
                   flex: 1,
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Ingrese datos"),
+                            content: TextField(
+                              decoration: new InputDecoration(
+                                labelText: 'Ingrese palabra',
+                              ),
+                            ),
+                            actions: <Widget>[
+                              FlatButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: Text("Cancelar"),
+                              ),
+                              FlatButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => SecondPage(),
+                                    ),
+                                  );
+                                },
+                                child: Text("Aceptar"),
+                              ),
+                            ],
+                          );
+                        });
+                  },
                   child: Text(
                     "Pagina 2",
                     style: Theme.of(context).textTheme.button,
@@ -110,7 +144,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 30,
           ),
         ],
       ),
