@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String _datoPage2;
   String _datoPage3;
+  TextEditingController _alertController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +71,7 @@ class _HomePageState extends State<HomePage> {
                           return AlertDialog(
                             title: Text("Ingrese datos"),
                             content: TextField(
+                              controller: _alertController,
                               decoration: new InputDecoration(
                                 labelText: 'Ingrese palabra',
                               ),
@@ -84,10 +86,19 @@ class _HomePageState extends State<HomePage> {
                               FlatButton(
                                 onPressed: () {
                                   Navigator.of(context).pop();
-                                  Navigator.of(context).push(
+                                  Navigator.of(context)
+                                      .push(
                                     MaterialPageRoute(
-                                      builder: (context) => SecondPage(),
+                                      builder: (context) => SecondPage(
+                                          dato: _alertController.text),
                                     ),
+                                  )
+                                      .then(
+                                    (returnedValue) {
+                                      _datoPage2 = returnedValue;
+                                      _alertController.clear();
+                                      setState(() {});
+                                    },
                                   );
                                 },
                                 child: Text("Aceptar"),

@@ -1,8 +1,13 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
-  const SecondPage({
+  final String dato;
+
+  SecondPage({
     Key key,
+    @required this.dato,
   }) : super(key: key);
 
   @override
@@ -10,8 +15,15 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
-  String _datoPage2;
-  String _datoPage3;
+  String dato;
+  int _randomNumber;
+  static const int MAX_RANDOM = 1000;
+
+  @override
+  void initState() {
+    dato = widget.dato;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +56,16 @@ class _SecondPageState extends State<SecondPage> {
               SizedBox(height: 10),
               Container(
                 child: Text(
-                  '185',
+                  '${_randomNumber ?? "-"}',
                   style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
               SizedBox(height: 10),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  generateRandomNumber();
+                  setState(() {});
+                },
                 child: Text(
                   "Generar",
                   style: Theme.of(context).textTheme.button,
@@ -59,7 +74,12 @@ class _SecondPageState extends State<SecondPage> {
                 textColor: Colors.white,
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  String number = (_randomNumber == null)
+                      ? " "
+                      : "${_randomNumber.toString()}";
+                  Navigator.of(context).pop(dato + " " + number);
+                },
                 child: Text(
                   "Guardar",
                   style: Theme.of(context).textTheme.button,
@@ -72,5 +92,10 @@ class _SecondPageState extends State<SecondPage> {
         ),
       ),
     );
+  }
+
+  void generateRandomNumber() {
+    Random rand = new Random();
+    _randomNumber = rand.nextInt(MAX_RANDOM);
   }
 }
